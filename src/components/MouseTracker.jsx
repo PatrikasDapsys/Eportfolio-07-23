@@ -19,12 +19,12 @@ function MouseTracker() {
     `absolute bg-black block z-10 w-16 h-16 top-[${mousePosition.y}px]`;
 
   return (
-    <div className="h-screen w-screen bg-transparent flex relative">
+    <div className="h-screen w-screen bg-transparent flex relative ">
       <div
         id="tracker"
         className={
           trackerStyles
-        //   ` left-[${mousePosition.x}px] `
+          ` left-[${mousePosition.x}px] top-[${mousePosition.y}px]`
         }
       ></div>
     </div>
