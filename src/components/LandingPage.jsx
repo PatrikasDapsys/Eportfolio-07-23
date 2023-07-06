@@ -1,11 +1,19 @@
 import React from "react";
 
 function LandingPage() {
+  const mask = "absolute z-[2] bg-primary-900 "
   const outsideText =
-    "text-primary-500 whitespace-nowrap absolute tracking-widest";
+    "text-primary-500 whitespace-nowrap absolute tracking-widest z-[3]";
 
   return (
     <section className="w-screen h-screen bg-primary-900 flex justify-center p-[30px] relative">
+      {/* MASK  */}
+      <div className={mask + "h-[30px] w-screen top-0"}></div>
+      <div className={mask + "h-[30px] w-screen bottom-0"}></div>
+      <div className={mask + "h-screen w-[30px] left-0"}></div>
+      <div className={mask + "h-screen w-[30px] right-0"}></div>
+
+
       {/* OUSIDE TEXT */}
       <span
         className={outsideText + " left-[-45px] top-[80px] rotate-[270deg] "}
@@ -23,7 +31,7 @@ function LandingPage() {
       {/* INNER TEXT */}
       <div className="w-full border-2 border-primary-500 flex flex-col justify-between">
         <div className="text-white text-3xl p-8 w-[50%]">
-          <div className="mb-3 text-5xl z-20">Patrikas Dapsys</div>
+          <div className="mb-3 text-5xl">Patrikas Dapsys</div>
           <div className="text-xs text-gray-200">
             I'm a Frontend software engineer with a strong passion for building
             web applications with great user experiences.

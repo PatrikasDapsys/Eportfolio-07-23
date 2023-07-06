@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
 import LandingPage from "./components/LandingPage";
 import MouseTracker from "./components/MouseTracker";
-import ChangingShape from "./components/ChangingShape";
 
 function App() {
 
