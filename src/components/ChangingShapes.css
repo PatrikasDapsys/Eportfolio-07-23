@@ -3,7 +3,7 @@
     min-width: 600px;
     min-height: 600px;
     animation: rotating 30s linear infinite;
-    opacity: .1;
+    opacity: .2;
     filter: blur(1px);
 }
 
