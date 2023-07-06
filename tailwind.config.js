@@ -20,7 +20,10 @@ export default {
       },
       animation: {
         'bouncing': 'bouncing 400ms alternate infinite'
-      }
+      },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   purge: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
