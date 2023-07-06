@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "react-spring";
+import ChangingShape from "./ChangingShape";
 
 function MouseTracker() {
   const [mousePosition, setMousePosition] = useState({});
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
+      const { clientX, clientY } = event;
+      setMousePosition({ x: clientX, y: clientY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -14,20 +17,21 @@ function MouseTracker() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+  const shapeSize = 600;
+  const shapeOffset = shapeSize / 2;
 
-  const trackerStyles =
-    `absolute bg-black block z-10 w-16 h-16 top-[${mousePosition.y}px]`;
+  const laggedPosition = useSpring({
+    left: `${mousePosition.x - shapeOffset}px`,
+    top: `${mousePosition.y - shapeOffset}px`,
+    config: { tension: 40, friction: 20 },
+  });
+
+  const trackerStyles = `absolute z-[1] pointer-events-none`;
 
   return (
-    <div className="h-screen w-screen bg-transparent flex relative ">
-      <div
-        id="tracker"
-        className={
-          trackerStyles
-          ` left-[${mousePosition.x}px] top-[${mousePosition.y}px]`
-        }
-      ></div>
-    </div>
+    <animated.div className={trackerStyles} style={laggedPosition}>
+      <ChangingShape />
+    </animated.div>
   );
 }
 

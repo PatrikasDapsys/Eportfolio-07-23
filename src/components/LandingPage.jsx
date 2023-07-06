@@ -23,7 +23,7 @@ function LandingPage() {
       {/* INNER TEXT */}
       <div className="w-full border-2 border-primary-500 flex flex-col justify-between">
         <div className="text-white text-3xl p-8 w-[50%]">
-          <div className="mb-3 text-5xl">Patrikas Dapsys</div>
+          <div className="mb-3 text-5xl z-20">Patrikas Dapsys</div>
           <div className="text-xs text-gray-200">
             I'm a Frontend software engineer with a strong passion for building
             web applications with great user experiences.
