@@ -1,8 +1,8 @@
 import "./ChangingShapes.css";
 
-function ChangingShape() {
+function ChangingShape({ shapeSize }) {
   return (
-    <div className="blob">
+    <div className="blob" style={{minHeight:`${shapeSize}px`, minWidth:`${shapeSize}px`}}>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <pattern
           id="grainyPattern"
@@ -11,19 +11,9 @@ function ChangingShape() {
           patternUnits="userSpaceOnUse"
         >
           <rect width="1" height="1" fill="#464646" />
-          <rect
-            x="1"
-            y="1"
-            width="1"
-            height="1"
-            fill="#000000"
-            opacity="0.1"
-          />
+          <rect x="1" y="1" width="1" height="1" fill="#000000" opacity="0.1" />
         </pattern>
-        <path
-          fill="url(#grainyPattern)"
-          transform="translate(100 100)"
-        >
+        <path fill="url(#grainyPattern)" transform="translate(100 100)">
           <animate
             attributeName="d"
             dur="3000ms"

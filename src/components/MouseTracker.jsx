@@ -4,6 +4,30 @@ import ChangingShape from "./ChangingShape";
 
 function MouseTracker() {
   const [mousePosition, setMousePosition] = useState({});
+  const [shapeSize, setShapeSize] = useState(400);
+  const [isIncreasing, setIsIncreasing] = useState(true);
+
+  useEffect(() => {
+    const animateSize = () => {
+      if (isIncreasing) {
+        if (shapeSize < 1000) {
+          setShapeSize((prevSize) => prevSize + 1);
+        } else {
+          setIsIncreasing(false);
+        }
+      } else {
+        if (shapeSize > 200) {
+          setShapeSize((prevSize) => prevSize - 1);
+        } else {
+          setIsIncreasing(true);
+        }
+      }
+    };
+
+    const animationId = requestAnimationFrame(animateSize);
+
+    return () => cancelAnimationFrame(animationId);
+  }, [shapeSize, isIncreasing]);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -17,7 +41,6 @@ function MouseTracker() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  const shapeSize = 600;
   const shapeOffset = shapeSize / 2;
 
   const laggedPosition = useSpring({
@@ -30,7 +53,7 @@ function MouseTracker() {
 
   return (
     <animated.div className={trackerStyles} style={laggedPosition}>
-      <ChangingShape />
+      <ChangingShape shapeSize={shapeSize} />
     </animated.div>
   );
 }

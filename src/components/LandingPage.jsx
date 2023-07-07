@@ -24,8 +24,8 @@ function LandingPage() {
       >
         Patrikas Dapsys
       </span>
-      <button className="w-[16px] h-6 border rounded-full block absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]">
-        <div className="w-1 h-1 border rounded-full absolute top-[5px] left-[5.5px] animate-bouncing"></div>
+      <button className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]">
+        <div className="w-1 h-1 border rounded-full absolute animate-bouncing"></div>
       </button>
       {/* INNER TEXT */}
       <div className="w-full border-2 border-primary-500 flex flex-col justify-between">
