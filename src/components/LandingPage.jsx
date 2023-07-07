@@ -28,7 +28,7 @@ function LandingPage() {
         <div className="w-1 h-1 border rounded-full absolute animate-bouncing"></div>
       </a>
       {/* INNER TEXT */}
-      <div className="w-full border-2 border-primary-500 flex flex-col justify-between">
+      <div className="w-full border-2 flex flex-col justify-between">
         <div className="text-white text-3xl w-[80%] sm:w-[50%] p-4 xs:p-8">
           <div className="mb-3 text-5xl md:text-6xl xl:text-7xl">
             Patrikas Dapsys
