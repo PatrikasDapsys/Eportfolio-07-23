@@ -11,15 +11,24 @@ export default {
       keyframes: {
         bouncing: {
           "0%": {
-            transform:  'translateY(0px)'
+            transform: "translateY(0px)",
           },
-          '100%': {
-            transform:  'translateY(6px)'
-          }
-        }
+          "100%": {
+            transform: "translateY(6px)",
+          },
+        },
+        rotating: {
+          "0%": {
+            rotate: "0deg",
+          },
+          "100%": {
+            rotate: "360deg",
+          },
+        },
       },
       animation: {
-        'bouncing': 'bouncing 400ms alternate infinite'
+        bouncing: "bouncing 400ms alternate infinite",
+        rotate: "rotating 30s linear infinite",
       },
       screens: {
         xs: "480px",

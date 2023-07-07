@@ -1,8 +1,6 @@
-import "./ChangingShapes.css";
-
 function ChangingShape({ shapeSize }) {
   return (
-    <div className="blob" style={{minHeight:`${shapeSize}px`, minWidth:`${shapeSize}px`}}>
+    <div className="blob absolute opacity-[0.2] blur-[1px] animate-rotate" style={{minHeight:`${shapeSize}px`, minWidth:`${shapeSize}px`}}>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <pattern
           id="grainyPattern"
