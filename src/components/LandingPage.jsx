@@ -10,8 +10,8 @@ function LandingPage() {
       {/* MASK  */}
       <div className={mask + "h-[30px] w-screen top-0"}></div>
       <div className={mask + "h-[30px] w-screen bottom-0"}></div>
-      <div className={mask + "h-screen w-[30px] left-0"}></div>
-      <div className={mask + "h-screen w-[30px] right-0"}></div>
+      <div className={mask + "w-[30px] left-0"} style={{ height: 'calc(100vh - 30px)'}}></div> 
+      <div className={mask + "w-[30px] right-0"} style={{ height: 'calc(100vh - 30px)'}}></div>
 
       {/* OUSIDE TEXT */}
       <span
@@ -24,9 +24,9 @@ function LandingPage() {
       >
         Patrikas Dapsys
       </span>
-      <button className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]">
+      <a href="#projects" className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]">
         <div className="w-1 h-1 border rounded-full absolute animate-bouncing"></div>
-      </button>
+      </a>
       {/* INNER TEXT */}
       <div className="w-full border-2 border-primary-500 flex flex-col justify-between">
         <div className="text-white text-3xl w-[80%] sm:w-[50%] p-4 xs:p-8">

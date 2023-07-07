@@ -3,10 +3,9 @@ import { useSpring, animated } from "react-spring";
 import ChangingShape from "./ChangingShape";
 
 function MouseTracker() {
-  const [mousePosition, setMousePosition] = useState({});
   const [shapeSize, setShapeSize] = useState(400);
   const [isIncreasing, setIsIncreasing] = useState(true);
-
+  
   useEffect(() => {
     const animateSize = () => {
       if (isIncreasing) {
@@ -23,16 +22,17 @@ function MouseTracker() {
         }
       }
     };
-
+    
     const animationId = requestAnimationFrame(animateSize);
-
+    
     return () => cancelAnimationFrame(animationId);
   }, [shapeSize, isIncreasing]);
-
+  
+  const [mousePosition, setMousePosition] = useState({});
   useEffect(() => {
     const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
-      setMousePosition({ x: clientX, y: clientY });
+      const { pageX, pageY } = event;
+      setMousePosition({ x: pageX, y: pageY });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
