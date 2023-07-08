@@ -22,7 +22,11 @@ function ProjectsPage() {
       id="projects"
       className="min-h-screen pt-16  bg-primary-900 text-white flex flex-col items-center gap-10"
     >
-      <h1 className=" text-center flex pb-16 pl-0 uppercase tracking-normal sm:pl-[20px] sm:tracking-[20px] md:pl-[60px] md:tracking-[60px] text-6xl xl:text-7xl">
+      <h1
+        className=" text-center flex pb-16 pl-0 uppercase tracking-normal text-5xl 
+       sm:pl-[20px] sm:tracking-[20px]
+        md:pl-[60px] md:tracking-[60px] xs:text-6xl xl:text-7xl"
+      >
         Projects
       </h1>
 
@@ -32,7 +36,7 @@ function ProjectsPage() {
         {/* TEXT */}
         <div className="text-center md:text-left md:border-r-2">
           <div className="p-3 xs:p-6">
-            <h2 className="text-4xl font-normal tracking-widest uppercase text-gray-100">
+            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Fullstack Ecommerce website
             </h2>
             <hr className="my-4" />
@@ -89,15 +93,15 @@ function ProjectsPage() {
       </div>
 
       {/* PROJECT 2 */}
-      <div className="border-2 w-4/5 grid grid-cols-[1.2fr,0.8fr]">
+      <div className="border-2 w-4/5 grid md:grid-cols-[1.2fr,0.8fr]">
         {/* TEXT */}
-        <div className="order-1">
+        <div className="text-center md:text-left md:border-r-2 order-0 md:order-1 ">
           <div className="p-3 xs:p-6">
-            <h2 className="text-4xl font-normal tracking-widest uppercase text-gray-100">
+            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               evogym
             </h2>
             <hr className="my-4" />
-            <p className="w-4/5 text-lg tracking-wider text-gray-200">
+            <p className="w-full text-lg tracking-wider text-gray-200 md:w-4/5">
               I've built a captivating gym website for my portfolio using{" "}
               <span className="keyword">Typescript, React, Tailwind, </span>
               and <span className="keyword">motion animations.</span>
@@ -149,15 +153,15 @@ function ProjectsPage() {
       </div>
 
       {/* PROJECT 3 */}
-      <div className="border-2 w-4/5 grid grid-cols-[0.8fr,1.2fr]">
+      <div className="border-2 w-4/5 grid md:grid-cols-[0.8fr,1.2fr]">
         {/* TEXT */}
-        <div className="border-r-2">
+        <div className="text-center md:text-left md:border-r-2">
           <div className="p-3 xs:p-6">
-            <h2 className="text-4xl font-normal tracking-widest uppercase text-gray-100">
+            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Ultraverse
             </h2>
             <hr className="my-4" />
-            <p className="w-4/5 text-lg tracking-wider text-gray-200">
+            <p className="w-full text-lg tracking-wider text-gray-200 md:w-4/5">
               I've worked on an impressive NFT trading website utilizing{" "}
               <span className="keyword">
                 {" "}
@@ -201,7 +205,11 @@ function ProjectsPage() {
                 />
               </svg>
             </Link>
-            <a href="https://github.com/PatrikasDapsys/patrikas-intership/" className="" target="_blank">
+            <a
+              href="https://github.com/PatrikasDapsys/patrikas-intership/"
+              className=""
+              target="_blank"
+            >
               <GitHubIcon />
             </a>
           </div>
