@@ -58,3 +58,6 @@ html {
   display: none;
 }
 
+.keyword {
+  @apply font-[450] italic;
+}

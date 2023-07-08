@@ -10,8 +10,14 @@ function LandingPage() {
       {/* MASK  */}
       <div className={mask + "h-[30px] w-screen top-0"}></div>
       <div className={mask + "h-[30px] w-screen bottom-0"}></div>
-      <div className={mask + "w-[30px] left-0"} style={{ height: 'calc(100vh - 30px)'}}></div> 
-      <div className={mask + "w-[30px] right-0"} style={{ height: 'calc(100vh - 30px)'}}></div>
+      <div
+        className={mask + "w-[30px] left-0"}
+        style={{ height: "calc(100vh - 30px)" }}
+      ></div>
+      <div
+        className={mask + "w-[30px] right-0"}
+        style={{ height: "calc(100vh - 30px)" }}
+      ></div>
 
       {/* OUSIDE TEXT */}
       <span
@@ -24,7 +30,10 @@ function LandingPage() {
       >
         Patrikas Dapsys
       </span>
-      <a href="#projects" className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]">
+      <a
+        href="#projects"
+        className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]"
+      >
         <div className="w-1 h-1 border rounded-full absolute animate-bouncing"></div>
       </a>
       {/* INNER TEXT */}
@@ -34,9 +43,10 @@ function LandingPage() {
             Patrikas Dapsys
           </div>
           <div className="text-xs text-gray-200 md:text-base xl:text-lg">
-            I'm a <span className="font-[450] italic">Frontend software engineer </span>
-            with a strong passion for building web applications with great user
-            experiences.
+            I'm a <span className="keyword"> Frontend software engineer </span>{" "}
+            with a strong <span className="keyword">passion</span> for building
+            web applications with{" "}
+            <span className="keyword">great user experiences.</span>
           </div>
         </div>
         <div className="w-full flex justify-end p-4 xs:p-8">
