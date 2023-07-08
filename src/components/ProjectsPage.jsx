@@ -5,25 +5,19 @@ import pic3 from "../assets/nft-thumb.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link } from "react-router-dom";
 
-const projects = [
-  {
-    title: "Fullstack Ecommerce website",
-    description:
-      "An ecommerce site that has a has alot of different functionality. For the user site, you can create an account, save to wishlist, save account information,",
-    img: { pic },
-    link: "tess",
-    github: "tess",
-  },
-];
-
 function ProjectsPage() {
+  const mask = "absolute z-[2] bg-primary-900 ";
+
   return (
     <section
       id="projects"
-      className="min-h-screen pt-16  bg-primary-900 text-white flex flex-col items-center gap-10"
+      className="min-h-screen pt-16  bg-primary-900 text-white flex flex-col items-center relative"
     >
+      <div className={mask + "h-[200px] w-full top-0"}></div>
+      <div className={mask + "h-full w-[10%] left-0"}></div>
+      <div className={mask + "h-full w-[10%] right-0"}></div>
       <h1
-        className=" text-center flex pb-16 pl-0 uppercase tracking-normal text-5xl 
+        className="h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
        sm:pl-[20px] sm:tracking-[20px]
         md:pl-[60px] md:tracking-[60px] xs:text-6xl xl:text-7xl"
       >
@@ -91,6 +85,7 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
+      <div className={mask + "relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
       <div className="border-2 w-4/5 grid md:grid-cols-[1.2fr,0.8fr]">
@@ -151,6 +146,8 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
+      <div className={mask + "relative w-full h-[40px]"}></div>
+
 
       {/* PROJECT 3 */}
       <div className="border-2 w-4/5 grid md:grid-cols-[0.8fr,1.2fr]">
@@ -215,6 +212,8 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
+      <div className={mask + "relative w-full h-[40px]"}></div>
+
     </section>
   );
 }

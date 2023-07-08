@@ -8,7 +8,7 @@ function ChangingShape({ shapeSize }) {
           height="2"
           patternUnits="userSpaceOnUse"
         >
-          <rect width="1" height="1" fill="#464646" />
+          <rect width="1" height="1" fill="#cbcaca" />
           <rect x="1" y="1" width="1" height="1" fill="#000000" opacity="0.1" />
         </pattern>
         <path fill="url(#grainyPattern)" transform="translate(100 100)">
