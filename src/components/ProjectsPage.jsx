@@ -14,8 +14,14 @@ function ProjectsPage() {
       className="min-h-screen pt-16  bg-primary-900 text-white flex flex-col items-center relative"
     >
       <div className={mask + "h-[200px] w-full top-0"}></div>
-      <div className={mask + "h-full w-[10%] left-0"}></div>
-      <div className={mask + "h-full w-[10%] right-0"}></div>
+      <div
+        className={mask + "w-[10%] left-0 top-0"}
+        style={{ height: "calc(100% - 24px)" }}
+      ></div>
+      <div
+        className={mask + "w-[10%] right-0 top-0"}
+        style={{ height: "calc(100% - 24px)" }}
+      ></div>
       <h1
         className="h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
        sm:pl-[20px] sm:tracking-[20px]
@@ -148,7 +154,6 @@ function ProjectsPage() {
       </div>
       <div className={mask + "relative w-full h-[40px]"}></div>
 
-
       {/* PROJECT 3 */}
       <div className="border-2 w-4/5 grid md:grid-cols-[0.8fr,1.2fr]">
         {/* TEXT */}
@@ -213,7 +218,6 @@ function ProjectsPage() {
         </div>
       </div>
       <div className={mask + "relative w-full h-[40px]"}></div>
-
     </section>
   );
 }
