@@ -14,7 +14,7 @@ export default {
             transform: "translateY(0px)",
           },
           "100%": {
-            transform: "translateY(6px)",
+            transform: "translateY(8px)",
           },
         },
         rotating: {
@@ -25,10 +25,23 @@ export default {
             rotate: "360deg",
           },
         },
+        glow: {
+          "0%": {
+            boxShadow: "none",
+          },
+          "50%": {
+            boxShadow: "0px 0px 2px 2px #808080",
+          },
+          "100%": {
+            boxShadow: "none",
+          },
+        },
       },
       animation: {
         bouncing: "bouncing 400ms alternate infinite",
         rotate: "rotating 30s linear infinite",
+        glow: "glow 800ms linear infinite",
+        glowingBounce: "bouncing 400ms alternate infinite, glow 800ms linear infinite",
       },
       screens: {
         xs: "480px",

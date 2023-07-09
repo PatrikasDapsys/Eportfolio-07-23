@@ -9,7 +9,7 @@ function LandingPage() {
     <section className="w-screen h-screen bg-primary-900 flex justify-center p-[30px] relative">
       {/* MASK  */}
       <div className={mask + "h-[30px] w-screen top-0"}></div>
-      <div className={mask + "h-[30px] w-screen bottom-0"}></div>
+      <div className={mask + "h-[46px] w-screen bottom-0"}></div>
       <div
         className={mask + "w-[30px] left-0"}
         style={{ height: "calc(100vh - 30px)" }}
@@ -26,18 +26,18 @@ function LandingPage() {
         Patrikas Dapsys
       </span>
       <span
-        className={outsideText + " right-[-45px] bottom-[80px] rotate-[90deg] "}
+        className={outsideText + " right-[-45px] bottom-[98px] rotate-[90deg] "}
       >
         Patrikas Dapsys
       </span>
       <a
         href="#projects"
-        className="w-[16px] h-6 border rounded-full flex justify-center absolute bottom-1 left-1/2 transform -translate-x-1/2 z-[2]"
+        className="animate-glow w-[20px] h-8 border rounded-full flex justify-center absolute bottom-2 left-1/2 transform -translate-x-1/2 z-[2]"
       >
-        <div className="w-1 h-1 border rounded-full absolute animate-bouncing"></div>
+        <div className="w-[6px] h-[7px] border rounded-full absolute animate-bouncing animate-glowingBounce"></div>
       </a>
       {/* INNER TEXT */}
-      <div className="w-full border-2 flex flex-col justify-between">
+      <div className="w-full border-2 flex flex-col justify-between mb-4">
         <div className="text-white text-3xl w-[80%] sm:w-[50%] p-4 xs:p-8">
           <div className="mb-3 text-5xl md:text-6xl xl:text-7xl">
             Patrikas Dapsys
