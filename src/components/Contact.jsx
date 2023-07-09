@@ -28,7 +28,9 @@ function Contact() {
         <hr className="w-[90%]" />
         {/* FORM */}
         <div className="flex flex-col items-center w-4/5">
-        <InputField>Text</InputField>
+          <InputField width="80%">Email</InputField>
+          <InputField width="70%">title</InputField>
+          <InputField width="70%">desc</InputField>
 
           {/* <div className="input-container">
             <input type="text" id="input" required="" />
