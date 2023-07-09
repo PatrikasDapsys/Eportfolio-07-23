@@ -44,10 +44,12 @@ function MouseTracker() {
   const shapeOffset = shapeSize / 2;
 
   const laggedPosition = useSpring({
-    left: `${mousePosition.x - shapeOffset}px`,
-    top: `${mousePosition.y - shapeOffset}px`,
+    left: mousePosition.x ? mousePosition.x - shapeOffset : 0,
+    top: mousePosition.y ? mousePosition.y - shapeOffset : 0,
     config: { tension: 40, friction: 20 },
   });
+  
+  
 
   const trackerStyles = `absolute z-[1] pointer-events-none`;
 
