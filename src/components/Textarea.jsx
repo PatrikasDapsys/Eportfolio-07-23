@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function InputField({ children, type, width, value, onChange }) {
+function Textarea({ children, width, value, onChange }) {
   const [isActive, setIsActive] = useState(false);
   const inputId = `input-${Math.random().toString(36).substring(2)}`;
 
@@ -15,7 +15,7 @@ function InputField({ children, type, width, value, onChange }) {
 
   const labelClass = `absolute  ${
     isActive
-      ? "-top-5 transition-all duration-300 text-white"
+      ? "-top-5 transition-all duration-300 text-gray-300"
       : "top-0 transition-all duration-300 text-primary-300"
   }`;
   const underlineClass = `absolute bottom-[-1px] h-[2px] w-full z-[2]${
@@ -26,32 +26,35 @@ function InputField({ children, type, width, value, onChange }) {
 
   return (
     <div
-      className={`relative mt-12 mb-6 h-[24px] border-b-[1px] border-primary-500 z-[1]`}
-      style={{ width: width }}
+      className={`relative mt-12 mb-6 h-[192px] w-[${width}] border-b-[1px] border-primary-500 z-[1]`}
     >
       {/* input-container */}
-      <input
-        type={type}
+      <textarea
+        type="text"
         id={inputId}
         value={value}
         onChange={onChange}
+        rows={6}
         required
         autoComplete="off"
-        className={`absolute w-full mt-0 border-b-0`}
+        className={`absolute w-full border-b-0`}
         onFocus={handleActive}
         onBlur={handleBlur}
       />
       <label
         htmlFor={inputId}
         className={
-          labelClass + " uppercase w-full text-center pl-[20px] tracking-[20px]"
+          labelClass +
+          " bold uppercase w-full text-center pl-[20px] tracking-[20px] border-b-[1px]"
         }
       >
         {children}
+        {/* <hr className={`absolute left-0 ${isActive ? 'border-white' : ''}`} style={{width: 'calc(100%)'}}/> */}
+        <div className={underlineClass + " left-0"}></div> {/* underline */}
       </label>
       <div className={underlineClass}></div> {/* underline */}
     </div>
   );
 }
 
-export default InputField;
+export default Textarea;

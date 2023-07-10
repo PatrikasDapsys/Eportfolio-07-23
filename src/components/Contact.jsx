@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import InputField from "./InputField";
+import Textarea from "./Textarea";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const [email, setEmail] = useState("");
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+
+  function handleSendEmail() {
+    event.preventDefault();
+    console.log('reanm')
+
+    emailjs
+      .sendForm("service_wiq41dr", "template_b6k9xcc", form.current, "JjmDr3ETYEd2mYjNo")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
+
   return (
     <section
-      className="h-screen bg-primary-900 text-white flex flex-col items-center pt-16"
+      className="h-[200vh] bg-primary-900 text-white flex flex-col items-center pt-16"
       id="contact"
     >
       <h1
@@ -14,10 +37,9 @@ function Contact() {
       >
         Contact
       </h1>
-
-      <div className="border-2 w-3/5 h-4/5 flex flex-col items-center">
+      <div className="border-2 w-3/5 flex flex-col items-center">
         {/* TEXT */}
-        <div className="text-center my-8 w-4/5 text-xl">
+        <div className="text-center my-8 w-4/5 text-xl font-normal text-primary-300">
           I am actively seeking job opportunities and welcome any inquiries
           related to potential employment, reviews, invitations to collaborate
           on projects, or if you have any questions. Your feedback and
@@ -27,30 +49,42 @@ function Contact() {
         </div>
         <hr className="w-[90%]" />
         {/* FORM */}
-        <div className="flex flex-col items-center w-4/5">
-          <InputField width="80%">Email</InputField>
-          <InputField width="70%">title</InputField>
-          <InputField width="70%">desc</InputField>
+        <form
+          ref={form}
+          type="submit"
+          className="flex flex-col items-center w-4/5"
+          onSubmit={handleSendEmail}
+        >
+          <InputField
+            type={"email"}
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+            width="80%"
+          >
+            Email
+          </InputField>
+          <InputField
+            width="70%"
+            value={title}
+            onChange={(ev) => setTitle(ev.target.value)}
+          >
+            title
+          </InputField>
+          <Textarea
+            width="90%"
+            value={message}
+            onChange={(ev) => setMessage(ev.target.value)}
+          >
+            Message
+          </Textarea>
 
-          {/* <div className="input-container">
-            <input type="text" id="input" required="" />
-            <label htmlFor="input" className="label">
-              Enter Text
-            </label>
-            <div className="underline"></div>
-          </div>
-
-          <input type="text" placeholder="title" className="w-[70%] mt-10" />
-          <textarea
-            type="text"
-            placeholder="message"
-            rows={8}
-            className="w-full mt-20 text-left"
-          />
-          <button className="w-2/5 pl-[20px] h-16 border mt-8 uppercase tracking-[20px]">
+          <button
+            type="submit"
+            className="w-2/5 pl-[20px] h-16 border my-8 uppercase tracking-[20px]"
+          >
             Submit
-          </button> */}
-        </div>
+          </button>
+        </form>
       </div>
     </section>
   );
