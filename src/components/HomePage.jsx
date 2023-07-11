@@ -2,6 +2,7 @@ import React from "react";
 import LandingPage from "./LandingPage";
 import ProjectsPage from "./ProjectsPage";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
       <LandingPage />
       <ProjectsPage />
       <Contact />
+      <Footer />
     </>
   );
 }

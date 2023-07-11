@@ -44,8 +44,8 @@ function Contact() {
     >
       {/* MASK */}
       <div className={mask + "top-0 w-full h-[200px]"}></div>
-      <div className={mask + "left-0 h-full w-[10%]  sm:w-1/5"}></div>
-      <div className={mask + "right-0 h-full w-[10%] sm:w-1/5"}></div>
+      <div className={mask + "left-0 w-[10%]  sm:w-1/5"} style={{height: 'calc(100% - 4rem)'}}></div>
+      <div className={mask + "right-0 w-[10%]  sm:w-1/5"} style={{height: 'calc(100% - 4rem)'}}></div>
       <div className={mask + "bottom-0 w-full h-16"}></div>
       {/* TITLE */}
       <h1
