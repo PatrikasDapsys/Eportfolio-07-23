@@ -38,11 +38,19 @@ function Contact() {
       );
   }
 
+  const mask = "absolute z-[2] bg-primary-900 ";
+
   return (
     <section
-      className="h-[200vh] bg-primary-900 text-white flex flex-col items-center pt-16"
+      className="bg-primary-900 text-white flex flex-col items-center py-16 relative"
       id="contact"
     >
+      {/* MASK */}
+      <div className={mask + "top-0 w-full h-[200px]"}></div>
+      <div className={mask + "left-0 h-full w-[10%]  sm:w-1/5"}></div>
+      <div className={mask + "right-0 h-full w-[10%] sm:w-1/5"}></div>
+      <div className={mask + "bottom-0 w-full h-16"}></div>
+      {/* TITLE */}
       <h1
         className="h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
        sm:pl-[20px] sm:tracking-[20px]
@@ -98,7 +106,7 @@ function Contact() {
           <AnimatedButton type="submit">Submit</AnimatedButton>
         </form>
       </div>
-    </section>  
+    </section>
   );
 }
 

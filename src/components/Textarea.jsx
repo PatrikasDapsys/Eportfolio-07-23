@@ -46,7 +46,7 @@ function Textarea({ children, width, value, name, onChange }) {
         htmlFor={inputId}
         className={
           labelClass +
-          " bold uppercase w-full text-center pl-[20px] tracking-[20px] border-b-[1px]"
+          " bold uppercase w-full text-center border-b-[1px] pl-[10px] tracking-[10px] xs:pl-[20px] xs:tracking-[20px]"
         }
       >
         {children}

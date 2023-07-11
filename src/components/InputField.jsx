@@ -45,7 +45,7 @@ function InputField({ children, type, width, value, name, onChange }) {
       <label
         htmlFor={inputId}
         className={
-          labelClass + " uppercase w-full text-center pl-[20px] tracking-[20px]"
+          labelClass + " uppercase w-full text-center pl-[10px] tracking-[10px] xs:pl-[20px] xs:tracking-[20px]"
         }
       >
         {children}
