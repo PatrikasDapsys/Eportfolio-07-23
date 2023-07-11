@@ -3,14 +3,14 @@ import InputField from "./InputField";
 import Textarea from "./Textarea";
 import emailjs from "@emailjs/browser";
 import AnimatedButton from "../components/AnimatedButton/AnimatedButton";
-// import { withSwal } from "react-sweetalert2";
+import { useAlert } from "react-alert";
 
 function Contact() {
-  //{ swal }
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
   const form = useRef();
+  const alert = useAlert();
 
   function handleSendEmail(event) {
     event.preventDefault();
@@ -27,13 +27,10 @@ function Contact() {
           setEmail("");
           setTitle("");
           setMessage("");
-          // swal.fire({
-          //   title: "Email sent!",
-          //   icon: "success",
-          // });
+          alert.success("email sent succesfully!");
         },
-        (error) => {
-          alert(error.text);
+        () => {
+          alert.error("Email wasn't sent!");
         }
       );
   }
@@ -111,4 +108,3 @@ function Contact() {
 }
 
 export default Contact;
-// export default withSwal(({ swal }) => <Contact swal={swal} />);
