@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Textarea({ children, width, value, onChange }) {
+function Textarea({ children, width, value, name, onChange }) {
   const [isActive, setIsActive] = useState(false);
   const inputId = `input-${Math.random().toString(36).substring(2)}`;
 
@@ -32,6 +32,7 @@ function Textarea({ children, width, value, onChange }) {
       <textarea
         type="text"
         id={inputId}
+        name={name}
         value={value}
         onChange={onChange}
         rows={6}

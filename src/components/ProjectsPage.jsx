@@ -32,15 +32,15 @@ function ProjectsPage() {
 
       {/* PROJECTS */}
       {/* PROJECT 1 */}
-      <div className="border-2 w-4/5 grid md:grid-cols-[0.8fr,1.2fr]">
+      <div className="border-2 w-4/5 grid xl:grid-cols-[0.8fr,1.2fr]">
         {/* TEXT */}
-        <div className="text-center md:text-left md:border-r-2">
+        <div className="text-center xl:text-left xl:border-r-2">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Fullstack Ecommerce website
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200 md:w-4/5">
+            <p className="w-full text-lg tracking-wider text-gray-200 xl:w-4/5">
               I've developed a feature-rich ecommerce site using{" "}
               <span className="keyword"> Next.js</span>,{" "}
               <span className="keyword">MongoDB</span>, and{" "}
@@ -94,15 +94,15 @@ function ProjectsPage() {
       <div className={mask + "relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
-      <div className="border-2 w-4/5 grid md:grid-cols-[1.2fr,0.8fr]">
+      <div className="border-2 w-4/5 grid xl:grid-cols-[1.2fr,0.8fr]">
         {/* TEXT */}
-        <div className="text-center md:text-left md:border-r-2 order-0 md:order-1 ">
+        <div className="text-center xl:text-left xl:border-r-2 order-0 xl:order-1 ">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               evogym
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200 md:w-4/5">
+            <p className="w-full text-lg tracking-wider text-gray-200 xl:w-4/5">
               I've built a captivating gym website for my portfolio using{" "}
               <span className="keyword">Typescript, React, Tailwind, </span>
               and <span className="keyword">motion animations.</span>
@@ -155,9 +155,9 @@ function ProjectsPage() {
       <div className={mask + "relative w-full h-[40px]"}></div>
 
       {/* PROJECT 3 */}
-      <div className="border-2 w-4/5 grid md:grid-cols-[0.8fr,1.2fr]">
+      <div className="border-2 w-4/5 grid xl:grid-cols-[0.8fr,1.2fr]">
         {/* TEXT */}
-        <div className="text-center md:text-left md:border-r-2">
+        <div className="text-center xl:text-left xl:border-r-2">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Ultraverse

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function InputField({ children, type, width, value, onChange }) {
+function InputField({ children, type, width, value, name, onChange }) {
   const [isActive, setIsActive] = useState(false);
   const inputId = `input-${Math.random().toString(36).substring(2)}`;
 
@@ -33,6 +33,7 @@ function InputField({ children, type, width, value, onChange }) {
       <input
         type={type}
         id={inputId}
+        name={name}
         value={value}
         onChange={onChange}
         required
