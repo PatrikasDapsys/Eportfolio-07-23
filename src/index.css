@@ -39,6 +39,11 @@
   font-style: italic;
 }
 
+::selection {
+  background-color: rgba(159, 159, 159, 0.863);
+  color: #000000;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
