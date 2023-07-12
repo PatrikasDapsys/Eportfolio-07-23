@@ -12,25 +12,50 @@ function Footer() {
           href="#landing"
           className="relative animate-glow border p-4 rounded-full transition shadow-primary-500 hover:scale-110 active:bg-primary-300"
         >
-          <span className="absolute left-[-10px] bottom-[-28px] whitespace-nowrap opacity-0 hover:opacity-100 z-10 pt-[70px] transition-opacity">Back To Top</span>
+          <span className="absolute left-[-10px] bottom-[-28px] whitespace-nowrap opacity-0 hover:opacity-100 z-10 pt-[70px] transition-opacity">
+            Back To Top
+          </span>
           <NorthIcon />
         </a>
 
         <ul className="flex gap-4 xs:gap-6">
-          <a target="_blank" href="https://github.com/PatrikasDapsys/">
-            GitHub
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/patrikas-dapsys/"
-          >
-            LinkedIn
-          </a>
-          <a target="_blank" href="">
-            Resume
-          </a>
-          <a href="#contact">Contact</a>
+          <li className="relative">
+            <a
+              target="_blank"
+              href="https://github.com/PatrikasDapsys/"
+              className="link__hover-effect"
+            >
+              GitHub
+            </a>
+          </li>
+          <li className="relative">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/patrikas-dapsys/"
+              className="link__hover-effect"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li className="relative">
+            <a
+              target="_blank"
+              href=""
+              className="link__hover-effect"
+            >
+              Resume
+            </a>
+          </li>
+          <li className="relative">
+            <a
+              href="#contact"
+              className="link__hover-effect"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
+
         <div className="">Copyright © Patrikas Dapšys 2023</div>
       </div>
     </footer>

@@ -83,10 +83,10 @@ function LandingPage() {
         <div className="w-full flex justify-between p-4 xs:p-8">
           <ul className="text-primary-300 flex flex-col-reverse list-disc">
             <li>
-              <a href="#contact">Contact</a>
+              <a className="link__hover-effect" href="#contact">Contact</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a className="link__hover-effect" href="#projects">Projects</a>
             </li>
           </ul>
           <div className="text-primary-300 uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">
