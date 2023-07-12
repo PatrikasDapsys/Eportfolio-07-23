@@ -1,9 +1,18 @@
-import React from "react";
-import pic from "../assets/ecom-front-thumb.png";
-import pic2 from "../assets/Gym-thumb.png";
-import pic3 from "../assets/nft-thumb.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Link } from "react-router-dom";
+import { ecomPhotos } from "./Pictures";
+import { evoPhotos } from "./Pictures";
+import { ultraPhotos } from "./Pictures";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const settings = {
+  infinite: true,
+  arrows: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 function ProjectsPage() {
   const mask = "absolute z-[2] bg-primary-900 ";
@@ -32,15 +41,15 @@ function ProjectsPage() {
 
       {/* PROJECTS */}
       {/* PROJECT 1 */}
-      <div className="border-2 w-4/5 grid xl:grid-cols-[0.8fr,1.2fr]">
+      <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:text-left xl:border-r-2">
+        <div className="text-center xl:border-r-2">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Fullstack Ecommerce website
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200 xl:w-4/5">
+            <p className="w-full text-lg tracking-wider text-gray-200">
               I've developed a feature-rich ecommerce site using{" "}
               <span className="keyword"> Next.js</span>,{" "}
               <span className="keyword">MongoDB</span>, and{" "}
@@ -53,17 +62,17 @@ function ProjectsPage() {
           </div>
         </div>
         {/* IMG */}
-        <div className=" p-6 flex items-center justify-center flex-col z-[2]">
-          <Link to={"/project/ecom"}>
-            <img
-              src={pic}
-              alt=""
-              className="rounded-lg overflow-hidden transition ease-linear w-full hover:scale-[1.03]"
-            />
-          </Link>
+        <div className=" p-6 flex items-center justify-center flex-col z-[2] w-full h-full">
+          <Slider {...settings} className="w-[60vw]">
+            {ecomPhotos.map((photo) => (
+              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img key={photo} src={photo} alt="" />
+              </a>
+            ))}
+          </Slider>
           <div className="flex pt-3 gap-4">
-            <Link
-              to={"https://next-ecommerce-front-nu.vercel.app/"}
+            <a
+              href={"https://next-ecommerce-front-nu.vercel.app/"}
               target="_blank"
             >
               <svg
@@ -80,7 +89,7 @@ function ProjectsPage() {
                   d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
                 />
               </svg>
-            </Link>
+            </a>
             <a
               href="https://github.com/PatrikasDapsys/next-ecommerce-front"
               target="_blank"
@@ -94,15 +103,15 @@ function ProjectsPage() {
       <div className={mask + "relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
-      <div className="border-2 w-4/5 grid xl:grid-cols-[1.2fr,0.8fr]">
+      <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:text-left xl:border-r-2 order-0 xl:order-1 ">
+        <div className="text-center xl:border-r-2">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               evogym
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200 xl:w-4/5">
+            <p className="w-full text-lg tracking-wider text-gray-200">
               I've built a captivating gym website for my portfolio using{" "}
               <span className="keyword">Typescript, React, Tailwind, </span>
               and <span className="keyword">motion animations.</span>
@@ -118,15 +127,15 @@ function ProjectsPage() {
         </div>
         {/* IMG */}
         <div className=" p-6 flex items-center justify-center flex-col z-[2] border-r-2 ">
-          <Link to={"/project/ecom"}>
-            <img
-              src={pic2}
-              alt=""
-              className="rounded-lg overflow-hidden transition ease-linear w-full hover:scale-[1.03]"
-            />
-          </Link>
+        <Slider {...settings} className="w-[60vw]">
+            {evoPhotos.map((photo) => (
+              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img key={photo} src={photo} alt="" />
+              </a>
+            ))}
+          </Slider>
           <div className="flex pt-3 gap-4">
-            <Link to={"https://gym-react-ts-xi.vercel.app/"} target="_blank">
+            <a href={"https://gym-react-ts-xi.vercel.app/"} target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -141,7 +150,7 @@ function ProjectsPage() {
                   d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
                 />
               </svg>
-            </Link>
+            </a>
             <a
               href="https://github.com/PatrikasDapsys/gym-react-ts"
               className=""
@@ -155,15 +164,15 @@ function ProjectsPage() {
       <div className={mask + "relative w-full h-[40px]"}></div>
 
       {/* PROJECT 3 */}
-      <div className="border-2 w-4/5 grid xl:grid-cols-[0.8fr,1.2fr]">
+      <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:text-left xl:border-r-2">
+        <div className="text-center xl:border-r-2">
           <div className="p-3 xs:p-6">
             <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
               Ultraverse
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200 md:w-4/5">
+            <p className="w-full text-lg tracking-wider text-gray-200">
               I've worked on an impressive NFT trading website utilizing{" "}
               <span className="keyword">
                 {" "}
@@ -183,15 +192,15 @@ function ProjectsPage() {
         </div>
         {/* IMG */}
         <div className=" p-6 flex items-center justify-center flex-col z-[2]">
-          <Link to={"/project/ecom"}>
-            <img
-              src={pic3}
-              alt=""
-              className="rounded-lg overflow-hidden transition ease-linear w-full hover:scale-[1.03]"
-            />
-          </Link>
+        <Slider {...settings} className="w-[60vw]">
+            {ultraPhotos.map((photo) => (
+              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img key={photo} src={photo} alt="" />
+              </a>
+            ))}
+          </Slider>
           <div className="flex pt-3 gap-4">
-            <Link to={"https://patrikas-intership.vercel.app/"} target="_blank">
+            <a href={"https://patrikas-intership.vercel.app/"} target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -206,7 +215,7 @@ function ProjectsPage() {
                   d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
                 />
               </svg>
-            </Link>
+            </a>
             <a
               href="https://github.com/PatrikasDapsys/patrikas-intership/"
               className=""
