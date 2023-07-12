@@ -41,7 +41,8 @@ export default {
         bouncing: "bouncing 400ms alternate infinite",
         rotate: "rotating 30s linear infinite",
         glow: "glow 800ms linear infinite",
-        glowingBounce: "bouncing 400ms alternate infinite, glow 800ms linear infinite",
+        glowingBounce:
+          "bouncing 400ms alternate infinite, glow 800ms linear infinite",
       },
       screens: {
         xs: "480px",

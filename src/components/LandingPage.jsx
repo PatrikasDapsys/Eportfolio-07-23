@@ -6,7 +6,7 @@ function LandingPage() {
     "text-primary-500 whitespace-nowrap absolute tracking-widest z-[3]";
 
   return (
-    <section className="w-screen h-screen bg-primary-900 flex justify-center p-[30px] relative">
+    <section id="landing" className="w-screen h-screen bg-primary-900 flex justify-center p-[30px] relative">
       {/* MASK  */}
       <div className={mask + "h-[30px] w-screen top-0"}></div>
       <div className={mask + "h-[46px] w-screen bottom-0"}></div>
