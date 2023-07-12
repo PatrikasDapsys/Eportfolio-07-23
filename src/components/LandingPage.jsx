@@ -58,11 +58,16 @@ function LandingPage() {
             </div>
           </div>
           <ul className="flex flex-col text-primary-300 gap-2">
-            <a className="link-wrapper" href="https://github.com/PatrikasDapsys/" target="_blank">
+            <a
+              className="link-wrapper"
+              href="https://github.com/PatrikasDapsys/"
+              target="_blank"
+            >
               <span className="popup">GitHub Profile</span>
               <GitHubIcon />
             </a>
-            <a className="link-wrapper"
+            <a
+              className="link-wrapper"
               href="https://www.linkedin.com/in/patrikas-dapsys/"
               target="_blank"
             >
@@ -75,7 +80,15 @@ function LandingPage() {
             </a>
           </ul>
         </div>
-        <div className="w-full flex justify-end p-4 xs:p-8">
+        <div className="w-full flex justify-between p-4 xs:p-8">
+          <ul className="text-primary-300 flex flex-col-reverse list-disc">
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+          </ul>
           <div className="text-primary-300 uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">
             Frontend <br /> <span className=""> software engineer</span>
           </div>
