@@ -4,9 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-900": "#0c0c0c",
-        "primary-300": "#A8A8A8",
-        "primary-500": "#808080",
+        "dark-300": "#A8A8A8",
+        "dark-500": "#808080",
+        "dark-900": "#0c0c0c",
+        "light-300": "#585858",
+        "light-500": "#404040",
+        "light-700": "#212121",
+        "light-900": "#e5e5e5",
       },
       aspectRatio: {
         "2/1": "2 / 1",

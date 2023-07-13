@@ -1,4 +1,4 @@
-function ChangingShape({ shapeSize }) {
+function ChangingShape({ shapeSize, isDarkMode }) {
   return (
     <div className="blob absolute opacity-[0.2] blur-[1px] animate-rotate" style={{minHeight:`${shapeSize}px`, minWidth:`${shapeSize}px`}}>
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -8,8 +8,8 @@ function ChangingShape({ shapeSize }) {
           height="2"
           patternUnits="userSpaceOnUse"
         >
-          <rect width="1" height="1" fill="#cbcaca" />
-          <rect x="1" y="1" width="1" height="1" fill="#000000" opacity="0.1" />
+          <rect width="1" height="1" fill={isDarkMode ? "#cbcaca" : "#000000"} />
+          <rect x="1" y="1" width="1" height="1" opacity="0.1" />
         </pattern>
         <path fill="url(#grainyPattern)" transform="translate(100 100)">
           <animate

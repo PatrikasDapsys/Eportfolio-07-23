@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import AnimatedButton from "../components/AnimatedButton/AnimatedButton";
 import { useAlert } from "react-alert";
 
-function Contact() {
+function Contact({ isDarkMode }) {
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
@@ -35,11 +35,11 @@ function Contact() {
       );
   }
 
-  const mask = "absolute z-[2] bg-primary-900 ";
+  const mask = "absolute z-[2] bg-dark-900 ";
 
   return (
     <section
-      className="bg-primary-900 text-white flex flex-col items-center py-16 relative"
+      className="bg-dark-900 text-white flex flex-col items-center py-16 relative"
       id="contact"
     >
       {/* MASK */}
@@ -57,7 +57,7 @@ function Contact() {
       </h1>
       <div className="border-2  flex flex-col items-center first-letter w-4/5 sm:w-3/5">
         {/* TEXT */}
-        <div className="text-center my-8 w-4/5 text-xl font-normal text-primary-300">
+        <div className="text-center my-8 w-4/5 text-xl font-normal text-dark-300">
           I am actively seeking job opportunities and welcome any inquiries
           related to potential employment, reviews, invitations to collaborate
           on projects, or if you have any questions. Your feedback and

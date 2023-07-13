@@ -1,17 +1,15 @@
-import React from "react";
 import LandingPage from "./LandingPage";
 import ProjectsPage from "./ProjectsPage";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import HackerWord from "./HackerWord";
 
-function HomePage() {
+function HomePage({ isDarkMode, setIsDarkMode }) {
   return (
     <>
-      <LandingPage />
-      <ProjectsPage />
-      <Contact />
-      <Footer />
+      <LandingPage isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <ProjectsPage isDarkMode={isDarkMode} />
+      <Contact isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 }

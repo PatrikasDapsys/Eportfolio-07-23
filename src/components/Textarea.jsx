@@ -16,7 +16,7 @@ function Textarea({ children, width, value, name, onChange }) {
   const labelClass = `absolute  ${
     isActive
       ? "-top-5 transition-all duration-300 text-gray-300"
-      : "top-0 transition-all duration-300 text-primary-300"
+      : "top-0 transition-all duration-300 text-dark-300"
   }`;
   const underlineClass = `absolute bottom-[-1px] h-[2px] w-full z-[2]${
     isActive
@@ -26,7 +26,7 @@ function Textarea({ children, width, value, name, onChange }) {
 
   return (
     <div
-      className={`relative mt-12 mb-6 h-[192px] w-[${width}] border-b-[1px] border-primary-500 z-[1]`}
+      className={`relative mt-12 mb-6 h-[192px] w-[${width}] border-b-[1px] border-dark-500 z-[1]`}
     >
       {/* input-container */}
       <textarea

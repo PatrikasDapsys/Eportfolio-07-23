@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()";
 
-const HackerWord = ({ children }) => {
+const HackerWord = ({ children, isDarkMode }) => {
   const h1Ref = useRef(null);
   let interval = null;
 
@@ -42,7 +42,8 @@ const HackerWord = ({ children }) => {
   }, []);
 
   return (
-    <h1 ref={h1Ref} data-value={children} onMouseOver={handleMouseOver}>
+    <h1 ref={h1Ref} data-value={children} onMouseOver={handleMouseOver}
+     className="text-inherit">
       {children}
     </h1>
   );

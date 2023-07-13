@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
 import ChangingShape from "./ChangingShape";
 
-function MouseTracker() {
+function MouseTracker({ isDarkMode }) {
   const [shapeSize, setShapeSize] = useState(400);
   const [isIncreasing, setIsIncreasing] = useState(true);
   
@@ -55,7 +55,7 @@ function MouseTracker() {
 
   return (
     <animated.div className={trackerStyles} style={laggedPosition}>
-      <ChangingShape shapeSize={shapeSize} />
+      <ChangingShape shapeSize={shapeSize} isDarkMode={isDarkMode}/>
     </animated.div>
   );
 }

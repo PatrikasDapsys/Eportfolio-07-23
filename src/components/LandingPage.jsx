@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DescriptionIcon from "@mui/icons-material/Description";
@@ -6,15 +6,18 @@ import HackerWord from "./HackerWord";
 import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
 import SquareSharpIcon from "@mui/icons-material/SquareSharp";
 
-function LandingPage() {
-  const mask = "absolute z-[2] bg-primary-900 ";
-  const outsideText =
-    "text-primary-500 whitespace-nowrap absolute tracking-widest z-[3]";
+function LandingPage({ isDarkMode, setIsDarkMode }) {
+  const mask = `absolute z-[2] ${isDarkMode ? "bg-dark-900" : "bg-light-900"} `;
+  const outsideText = `${
+    isDarkMode ? "text-dark-500" : "text-ligth-500"
+  } whitespace-nowrap absolute tracking-widest z-[3]`;
 
   return (
     <section
       id="landing"
-      className="w-screen h-screen bg-primary-900 flex justify-center p-[30px] relative"
+      className={` w-screen h-screen ${
+        isDarkMode ? "bg-dark-900" : "bg-light-900"
+      } flex justify-center p-[30px] relative transition-colors duration-300`}
     >
       {/* MASK  */}
       <div className={mask + "h-[30px] w-screen top-0"}></div>
@@ -38,14 +41,28 @@ function LandingPage() {
         Patrikas Dapšys
       </span>
 
-      <div className="absolute flex gap-3 text-white rotate-[270deg] bottom-[120px] left-[-55px] z-[3]">
-        <button className="uppercase flex items-center">
+      <div
+        className={`${
+          isDarkMode ? "text-white" : "text-black"
+        } absolute flex gap-3 rotate-[270deg] bottom-[120px] left-[-55px] z-[3] blur-[.6px]`}
+      >
+        <button
+          onClick={() => setIsDarkMode(false)}
+          className={` uppercase flex items-center`}
+        >
+          {isDarkMode ? <CheckBoxOutlineBlankSharpIcon /> : <SquareSharpIcon />}
           Light
-          <CheckBoxOutlineBlankSharpIcon />
         </button>
-        <button className="uppercase  flex items-center">
+        <button
+          onClick={() => setIsDarkMode(true)}
+          className="uppercase flex items-center"
+        >
+          {!isDarkMode ? (
+            <CheckBoxOutlineBlankSharpIcon />
+          ) : (
+            <SquareSharpIcon />
+          )}
           Dark
-          <SquareSharpIcon />
         </button>
       </div>
       <a
@@ -56,12 +73,20 @@ function LandingPage() {
       </a>
       {/* INNER TEXT */}
       <div className="w-full border-2 flex flex-col justify-between mb-4">
-        <div className="flex justify-between text-white text-3xl p-4 xs:p-8">
+        <div className={`flex justify-between text-3xl p-4 xs:p-8`}>
           <div className="">
-            <div className="mb-3 text-5xl md:text-6xl xl:text-7xl">
-              <HackerWord>Patrikas Dapšys</HackerWord>
+            <div
+              className={`${
+                isDarkMode ? "text-white" : "text-black"
+              } mb-3 text-5xl md:text-6xl xl:text-7xl`}
+            >
+              <HackerWord isDarkMode={isDarkMode}>Patrikas Dapšys</HackerWord>
             </div>
-            <div className="text-xs w-[80%] sm:w-[60%] text-gray-200 md:text-base xl:text-lg">
+            <div
+              className={`${
+                isDarkMode ? "text-dark-300" : "text-light-800"
+              } text-xs w-[80%] sm:w-[60%]  md:text-base xl:text-lg`}
+            >
               I'm a{" "}
               <span className="keyword"> Frontend software engineer </span> with
               a strong <span className="keyword">passion</span> for building web
@@ -69,7 +94,11 @@ function LandingPage() {
               <span className="keyword">great user experiences.</span>
             </div>
           </div>
-          <ul className="flex flex-col text-primary-300 gap-2">
+          <ul
+            className={`${
+              isDarkMode ? "text-gray-300" : "text-light-500"
+            } flex flex-col gap-2`}
+          >
             <a
               className="link-wrapper"
               href="https://github.com/PatrikasDapsys/"
@@ -92,8 +121,8 @@ function LandingPage() {
             </a>
           </ul>
         </div>
-        <div className="w-full flex justify-between p-4 xs:p-8">
-          <ul className="text-primary-300 flex flex-col-reverse list-disc">
+        <div className={`${isDarkMode ? "text-dark-300" : "text-light-300"} text-dark-300  w-full flex justify-between p-4 xs:p-8`}>
+          <ul className="flex flex-col-reverse list-disc">
             <li>
               <a className="link__hover-effect" href="#contact">
                 Contact
@@ -105,7 +134,7 @@ function LandingPage() {
               </a>
             </li>
           </ul>
-          <div className="text-primary-300 uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">
+          <div className="uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">
             Frontend <br /> <span className=""> software engineer</span>
           </div>
         </div>

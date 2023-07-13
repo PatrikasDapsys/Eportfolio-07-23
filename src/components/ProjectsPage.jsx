@@ -14,13 +14,13 @@ const settings = {
   slidesToScroll: 1,
 };
 
-function ProjectsPage() {
-  const mask = "absolute z-[2] bg-primary-900 ";
+function ProjectsPage({ isDarkMode }) {
+  const mask = "absolute z-[2] bg-dark-900 ";
 
   return (
     <section
       id="projects"
-      className="min-h-screen pt-16  bg-primary-900 text-white flex flex-col items-center relative"
+      className="min-h-screen pt-16  bg-dark-900 text-white flex flex-col items-center relative"
     >
       <div className={mask + "h-[200px] w-full top-0"}></div>
       <div
