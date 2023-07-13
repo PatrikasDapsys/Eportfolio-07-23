@@ -65,8 +65,8 @@ function ProjectsPage() {
         <div className=" p-6 flex items-center justify-center flex-col z-[2] w-full h-full">
           <Slider {...settings} className="w-[60vw]">
             {ecomPhotos.map((photo) => (
-              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
-                <img key={photo} src={photo} alt="" />
+              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>
@@ -129,8 +129,8 @@ function ProjectsPage() {
         <div className=" p-6 flex items-center justify-center flex-col z-[2] border-r-2 ">
         <Slider {...settings} className="w-[60vw]">
             {evoPhotos.map((photo) => (
-              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
-                <img key={photo} src={photo} alt="" />
+              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>
@@ -194,8 +194,8 @@ function ProjectsPage() {
         <div className=" p-6 flex items-center justify-center flex-col z-[2]">
         <Slider {...settings} className="w-[60vw]">
             {ultraPhotos.map((photo) => (
-              <a target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
-                <img key={photo} src={photo} alt="" />
+              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+                <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>

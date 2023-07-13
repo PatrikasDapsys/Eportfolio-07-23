@@ -2,6 +2,9 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DescriptionIcon from "@mui/icons-material/Description";
+import HackerWord from "./HackerWord";
+import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
+import SquareSharpIcon from "@mui/icons-material/SquareSharp";
 
 function LandingPage() {
   const mask = "absolute z-[2] bg-primary-900 ";
@@ -29,13 +32,22 @@ function LandingPage() {
       <span
         className={outsideText + " left-[-45px] top-[80px] rotate-[270deg] "}
       >
-        Patrikas Dapsys
+        Patrikas Dapšys
       </span>
-      <span
-        className={outsideText + " right-[-45px] bottom-[98px] rotate-[90deg] "}
-      >
-        Patrikas Dapsys
+      <span className={outsideText + " right-[-45px] bottom-[98px] rotate-90 "}>
+        Patrikas Dapšys
       </span>
+
+      <div className="absolute flex gap-3 text-white rotate-[270deg] bottom-[120px] left-[-55px] z-[3]">
+        <button className="uppercase flex items-center">
+          Light
+          <CheckBoxOutlineBlankSharpIcon />
+        </button>
+        <button className="uppercase  flex items-center">
+          Dark
+          <SquareSharpIcon />
+        </button>
+      </div>
       <a
         href="#projects"
         className="animate-glow w-[20px] h-8 border rounded-full flex justify-center absolute bottom-2 left-1/2 transform -translate-x-1/2 z-[2]"
@@ -47,7 +59,7 @@ function LandingPage() {
         <div className="flex justify-between text-white text-3xl p-4 xs:p-8">
           <div className="">
             <div className="mb-3 text-5xl md:text-6xl xl:text-7xl">
-              Patrikas Dapsys
+              <HackerWord>Patrikas Dapšys</HackerWord>
             </div>
             <div className="text-xs w-[80%] sm:w-[60%] text-gray-200 md:text-base xl:text-lg">
               I'm a{" "}
@@ -83,10 +95,14 @@ function LandingPage() {
         <div className="w-full flex justify-between p-4 xs:p-8">
           <ul className="text-primary-300 flex flex-col-reverse list-disc">
             <li>
-              <a className="link__hover-effect" href="#contact">Contact</a>
+              <a className="link__hover-effect" href="#contact">
+                Contact
+              </a>
             </li>
             <li>
-              <a className="link__hover-effect" href="#projects">Projects</a>
+              <a className="link__hover-effect" href="#projects">
+                Projects
+              </a>
             </li>
           </ul>
           <div className="text-primary-300 uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">

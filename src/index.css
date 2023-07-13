@@ -86,7 +86,7 @@ textarea:focus-within {
 
 /* MEDIA POPUP */
 
-.link-wrapper{
+.link-wrapper {
   position: relative;
 }
 
@@ -104,7 +104,7 @@ textarea:focus-within {
 .link-wrapper:hover .popup {
   opacity: 1;
   transform: translateX(-30px);
-  @media (max-width:630px) {
+  @media (max-width: 630px) {
     opacity: 0;
   }
 }
@@ -133,5 +133,3 @@ textarea:focus-within {
   left: 0;
   width: 100%;
 }
-
-

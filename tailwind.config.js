@@ -8,6 +8,9 @@ export default {
         "primary-300": "#A8A8A8",
         "primary-500": "#808080",
       },
+      aspectRatio: {
+        "2/1": "2 / 1",
+      },
       keyframes: {
         bouncing: {
           "0%": {
