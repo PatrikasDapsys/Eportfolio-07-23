@@ -5,6 +5,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import HackerWord from "./HackerWord";
 import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
 import SquareSharpIcon from "@mui/icons-material/SquareSharp";
+import { delay, motion } from "framer-motion";
 
 let themeValue = "dark";
 function LandingPage() {
@@ -96,7 +97,9 @@ function LandingPage() {
             >
               <HackerWord>Patrikas Dapšys</HackerWord>
             </div>
-            <div
+            <motion.div
+              transition={{ delay: 0.7, duration: 0.7 }}
+              animate={{ x: [-1000, 20, 0] }}
               className={`text-light-300 dark:text-dark-300 text-xs w-[80%] sm:w-[60%]  md:text-base xl:text-lg`}
             >
               I'm a{" "}
@@ -104,14 +107,16 @@ function LandingPage() {
               a strong <span className="keyword">passion</span> for building web
               applications with{" "}
               <span className="keyword">great user experiences.</span>
-            </div>
+            </motion.div>
           </div>
-          <ul
+          <motion.ul
+            transition={{ delay: 0.7, duration: 1.5 }}
+            animate={{ x: [100, 0] }}
             className={`text-light-500 dark:text-gray-300 flex flex-col gap-2`}
           >
             <a href="mailto:patrikas.dapsys@gmail.com" className="link-wrapper">
               <span className="font-bold">@</span>
-            <span className="popup">MyEmail@email.com</span>
+              <span className="popup">MyEmail@email.com</span>
             </a>
             <a
               className="link-wrapper"
@@ -133,13 +138,17 @@ function LandingPage() {
               <span className="popup">Resume</span>
               <DescriptionIcon />
             </a>
-          </ul>
+          </motion.ul>
         </div>
         <div
           className={`dark:text-dark-300
          text-light-300 w-full flex justify-between p-4 xs:p-8`}
         >
-          <ul className="flex flex-col-reverse list-disc">
+          <motion.ul
+            transition={{ delay: 0.7, duration: 1.5 }}
+            animate={{ x: [-100, 0] }}
+            className="flex flex-col-reverse list-disc"
+          >
             <li>
               <a className="font-[530] link__hover-effect" href="#contact">
                 Contact
@@ -150,10 +159,15 @@ function LandingPage() {
                 Projects
               </a>
             </li>
-          </ul>
-          <div className="uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl">
+          </motion.ul>
+          <motion.div
+            initial={{ opacity: 0 }} // Set the initial opacity to 0
+            animate={{ opacity: 1 }} // Animate the opacity to 1
+            transition={{delay: 1.5, duration: 3}}
+            className="uppercase text-right text-2xl sm:text-4xl md:text-6xl xl:text-8xl"
+          >
             Frontend <br /> <span className=""> software engineer</span>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

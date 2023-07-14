@@ -5,6 +5,7 @@ import { ultraPhotos } from "./Pictures";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 
 const settings = {
   infinite: true,
@@ -30,7 +31,17 @@ function ProjectsPage() {
 
       {/* PROJECTS */}
       {/* PROJECT 1 */}
-      <div className="border-2 w-4/5 grid">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          hidden: { y: 500 },
+          visible: { y: 0 },
+        }}
+        className="border-2 w-4/5 grid"
+      >
         {/* TEXT */}
         <div className="text-center">
           <div className="p-3 xs:p-6">
@@ -40,7 +51,8 @@ function ProjectsPage() {
             <hr className="my-4" />
             <p className="w-full text-lg tracking-wider text-light-700 dark:text-gray-200">
               I've developed a <span className="keyword">feature-rich</span>{" "}
-              ecommerce site using <span className="keyword">JavaScript</span>, <span className="keyword"> Next.js</span>,{" "}
+              ecommerce site using <span className="keyword">JavaScript</span>,{" "}
+              <span className="keyword"> Next.js</span>,{" "}
               <span className="keyword">MongoDB</span>, and{" "}
               <span className="keyword">styled components.</span> <br />
               Users can create accounts, save items to their wishlist, manage
@@ -93,11 +105,21 @@ function ProjectsPage() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className={"mask !relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
-      <div className="border-2 w-4/5 grid">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          hidden: { y: 500 },
+          visible: { y: 0 },
+        }}
+        className="border-2 w-4/5 grid"
+      >
         {/* TEXT */}
         <div className="text-center">
           <div className="p-3 xs:p-6">
@@ -108,7 +130,7 @@ function ProjectsPage() {
             <p className="w-full text-lg tracking-wider text-light-700 dark:text-gray-200">
               I've built a captivating gym website for my portfolio using{" "}
               <span className="keyword">Typescript, React, Tailwind, </span>
-              and <span className="keyword">motion animations.</span>
+              and <span className="keyword">Framer animations.</span>
               <br />
               It offers an{" "}
               <span className="keyword"> interactive user experience</span>,
@@ -133,7 +155,11 @@ function ProjectsPage() {
             ))}
           </Slider>
           <div className="flex pt-3 gap-4 text-dark-900 dark:text-white">
-            <a href={"https://gym-react-ts-xi.vercel.app/"} target="_blank">
+            <a
+              href={"https://gym-react-ts-xi.vercel.app/"}
+              target="_blank"
+              className="hover:scale-110"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -151,18 +177,28 @@ function ProjectsPage() {
             </a>
             <a
               href="https://github.com/PatrikasDapsys/gym-react-ts"
-              className=""
+              className="hover:scale-110"
               target="_blank"
             >
               <GitHubIcon />
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className={"mask !relative w-full h-[40px]"}></div>
 
       {/* PROJECT 3 */}
-      <div className="border-2 w-4/5 grid">
+      <motion.div
+        className="border-2 w-4/5 grid"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          hidden: { y: 500 },
+          visible: { y: 0 },
+        }}
+      >
         {/* TEXT */}
         <div className="text-center">
           <div className="p-3 xs:p-6">
@@ -202,7 +238,11 @@ function ProjectsPage() {
             ))}
           </Slider>
           <div className="flex pt-3 gap-4 text-dark-900 dark:text-white">
-            <a href={"https://patrikas-intership.vercel.app/"} target="_blank">
+            <a
+              href={"https://patrikas-intership.vercel.app/"}
+              target="_blank"
+              className="hover:scale-110"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -220,14 +260,14 @@ function ProjectsPage() {
             </a>
             <a
               href="https://github.com/PatrikasDapsys/patrikas-intership/"
-              className=""
+              className="hover:scale-110"
               target="_blank"
             >
               <GitHubIcon />
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className={"mask !relative w-full h-[40px]"}></div>
     </section>
   );
