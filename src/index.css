@@ -80,12 +80,30 @@ textarea:focus-within {
   @apply outline-none border-white transition-colors;
 }
 
+.slick-arrow::before {
+  @apply text-black dark:text-white;
+}
+
+/* COMMON CLASSES */
+
 .keyword {
   @apply font-[450] italic;
 }
 
 .mask {
   @apply duration-700 absolute z-[2] bg-light-900 dark:bg-dark-900;
+}
+
+.section {
+  @apply flex flex-col items-center relative bg-light-900 text-white dark:bg-dark-900 duration-1000;
+}
+.title {
+  @apply h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
+  xs:text-6xl
+  sm:pl-[20px] sm:tracking-[20px]
+  md:pl-[60px] md:tracking-[60px]
+  xl:text-7xl
+  text-black dark:text-white;
 }
 
 /* MEDIA POPUP */
@@ -100,8 +118,8 @@ textarea:focus-within {
   white-space: nowrap;
   text-align: right;
   transition: all 300ms ease;
-  width: 80px;
-  left: -60px;
+  width: 120px;
+  left: -100px;
   opacity: 0;
   font-weight: 530;
 }
@@ -130,7 +148,7 @@ textarea:focus-within {
 }
 
 .link__hover-effect::after {
-  background-color: #fff;
+  @apply bg-black dark:bg-white;
 }
 
 .link__hover-effect:hover::after {

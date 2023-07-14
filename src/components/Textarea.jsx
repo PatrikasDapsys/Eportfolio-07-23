@@ -15,12 +15,12 @@ function Textarea({ children, width, value, name, onChange }) {
 
   const labelClass = `absolute  ${
     isActive
-      ? "-top-5 transition-all duration-300 text-gray-300"
-      : "top-0 transition-all duration-300 text-dark-300"
+      ? "-top-5 transition-all duration-300 text-black dark:text-white"
+      : "top-0 transition-all duration-300 text-dark-500 dark:text-dark-300"
   }`;
   const underlineClass = `absolute bottom-[-1px] h-[2px] w-full z-[2]${
     isActive
-      ? " bg-white transition-all duration-500 scale-x-100"
+      ? " transition-all duration-500 scale-x-100 bg-black dark:bg-white"
       : " transition-all duration-500 scale-x-0"
   }`;
 
@@ -38,7 +38,7 @@ function Textarea({ children, width, value, name, onChange }) {
         rows={6}
         required
         autoComplete="off"
-        className={`absolute w-full border-b-0`}
+        className={`absolute w-full border-b-0 text-black dark:text-white`}
         onFocus={handleActive}
         onBlur={handleBlur}
       />

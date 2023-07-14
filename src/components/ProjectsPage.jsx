@@ -15,12 +15,8 @@ const settings = {
 };
 
 function ProjectsPage() {
-
   return (
-    <section
-      id="projects"
-      className="min-h-screen pt-16  bg-dark-900 text-white flex flex-col items-center relative"
-    >
+    <section id="projects" className="section pt-16">
       <div className={"mask h-[200px] w-full top-0"}></div>
       <div
         className={"mask w-[10%] left-0 top-0"}
@@ -30,49 +26,48 @@ function ProjectsPage() {
         className={"mask w-[10%] right-0 top-0"}
         style={{ height: "calc(100% - 24px)" }}
       ></div>
-      <h1
-        className="h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
-       sm:pl-[20px] sm:tracking-[20px]
-        md:pl-[60px] md:tracking-[60px] xs:text-6xl xl:text-7xl"
-      >
-        Projects
-      </h1>
+      <h1 className="title">Projects</h1>
 
       {/* PROJECTS */}
       {/* PROJECT 1 */}
       <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:border-r-2">
+        <div className="text-center">
           <div className="p-3 xs:p-6">
-            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
+            <h2 className="font-normal tracking-widest uppercase text-2xl xs:text-4xl text-dark-900 dark:text-gray-100 ">
               Fullstack Ecommerce website
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200">
-              I've developed a feature-rich ecommerce site using{" "}
-              <span className="keyword"> Next.js</span>,{" "}
+            <p className="w-full text-lg tracking-wider text-light-700 dark:text-gray-200">
+              I've developed a <span className="keyword">feature-rich</span>{" "}
+              ecommerce site using <span className="keyword">JavaScript</span>, <span className="keyword"> Next.js</span>,{" "}
               <span className="keyword">MongoDB</span>, and{" "}
               <span className="keyword">styled components.</span> <br />
               Users can create accounts, save items to their wishlist, manage
               account information, and fulfill orders seamlessly. It showcases
               my <span className="keyword">expertise</span> in cutting-edge
-              front-end development.
+              <span className="keyword"> front-end</span> development.
             </p>
           </div>
         </div>
         {/* IMG */}
-        <div className=" p-6 flex items-center justify-center flex-col z-[2] w-full h-full">
+        <div className="p-6 flex items-center justify-center flex-col z-[2] w-full h-full">
           <Slider {...settings} className="w-[60vw]">
             {ecomPhotos.map((photo) => (
-              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+              <a
+                key={photo}
+                target="_blank"
+                href={"https://next-ecommerce-front-nu.vercel.app/"}
+              >
                 <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>
-          <div className="flex pt-3 gap-4">
+          <div className="flex pt-3 gap-4 text-dark-900 dark:text-white">
             <a
               href={"https://next-ecommerce-front-nu.vercel.app/"}
               target="_blank"
+              className="hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,25 +87,25 @@ function ProjectsPage() {
             <a
               href="https://github.com/PatrikasDapsys/next-ecommerce-front"
               target="_blank"
-              className=""
+              className="hover:scale-110"
             >
               <GitHubIcon />
             </a>
           </div>
         </div>
       </div>
-      <div className={"mask relative w-full h-[40px]"}></div>
+      <div className={"mask !relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
       <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:border-r-2">
+        <div className="text-center">
           <div className="p-3 xs:p-6">
-            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
+            <h2 className="font-normal tracking-widest uppercase text-2xl xs:text-4xl text-dark-900 dark:text-gray-100">
               evogym
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200">
+            <p className="w-full text-lg tracking-wider text-light-700 dark:text-gray-200">
               I've built a captivating gym website for my portfolio using{" "}
               <span className="keyword">Typescript, React, Tailwind, </span>
               and <span className="keyword">motion animations.</span>
@@ -125,15 +120,19 @@ function ProjectsPage() {
           </div>
         </div>
         {/* IMG */}
-        <div className=" p-6 flex items-center justify-center flex-col z-[2] border-r-2 ">
-        <Slider {...settings} className="w-[60vw]">
+        <div className=" p-6 flex items-center justify-center flex-col z-[2]">
+          <Slider {...settings} className="w-[60vw]">
             {evoPhotos.map((photo) => (
-              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+              <a
+                key={photo}
+                target="_blank"
+                href={"https://gym-react-ts-xi.vercel.app/"}
+              >
                 <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>
-          <div className="flex pt-3 gap-4">
+          <div className="flex pt-3 gap-4 text-dark-900 dark:text-white">
             <a href={"https://gym-react-ts-xi.vercel.app/"} target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -160,18 +159,18 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
-      <div className={"mask relative w-full h-[40px]"}></div>
+      <div className={"mask !relative w-full h-[40px]"}></div>
 
       {/* PROJECT 3 */}
       <div className="border-2 w-4/5 grid">
         {/* TEXT */}
-        <div className="text-center xl:border-r-2">
+        <div className="text-center">
           <div className="p-3 xs:p-6">
-            <h2 className="font-normal tracking-widest uppercase text-gray-100 text-2xl xs:text-4xl">
+            <h2 className="font-normal tracking-widest uppercase text-2xl xs:text-4xl text-dark-900 dark:text-gray-100">
               Ultraverse
             </h2>
             <hr className="my-4" />
-            <p className="w-full text-lg tracking-wider text-gray-200">
+            <p className="w-full text-lg tracking-wider text-light-700 dark:text-gray-200">
               I've worked on an impressive NFT trading website utilizing{" "}
               <span className="keyword">
                 {" "}
@@ -191,14 +190,18 @@ function ProjectsPage() {
         </div>
         {/* IMG */}
         <div className=" p-6 flex items-center justify-center flex-col z-[2]">
-        <Slider {...settings} className="w-[60vw]">
+          <Slider {...settings} className="w-[60vw]">
             {ultraPhotos.map((photo) => (
-              <a key={photo} target="_blank" href={"https://next-ecommerce-front-nu.vercel.app/"}>
+              <a
+                key={photo}
+                target="_blank"
+                href={"https://patrikas-intership.vercel.app/"}
+              >
                 <img className="aspect-2/1" src={photo} alt="" />
               </a>
             ))}
           </Slider>
-          <div className="flex pt-3 gap-4">
+          <div className="flex pt-3 gap-4 text-dark-900 dark:text-white">
             <a href={"https://patrikas-intership.vercel.app/"} target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +228,7 @@ function ProjectsPage() {
           </div>
         </div>
       </div>
-      <div className={"mask relative w-full h-[40px]"}></div>
+      <div className={"mask !relative w-full h-[40px]"}></div>
     </section>
   );
 }

@@ -10,7 +10,7 @@ function Footer({ isDarkMode }) {
   return (
       <footer
         id="footer"
-        className="h-[300px] text-dark-300 bg-dark-900 z-[3] relative border-t-[1px] border-t-zinc-900"
+        className="h-[300px] text-light-700 dark:text-dark-300 bg-light-900 dark:bg-dark-900 z-[3] relative border-t-[1px] border-t-zinc-900"
       >
         <div className="h-full flex flex-col items-center justify-center gap-11">
           <button

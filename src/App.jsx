@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HomePage from "./components/HomePage";
 import MouseTracker from "./components/MouseTracker";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

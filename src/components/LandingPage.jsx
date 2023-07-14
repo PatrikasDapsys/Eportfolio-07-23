@@ -109,6 +109,10 @@ function LandingPage() {
           <ul
             className={`text-light-500 dark:text-gray-300 flex flex-col gap-2`}
           >
+            <a href="mailto:patrikas.dapsys@gmail.com" className="link-wrapper">
+              <span className="font-bold">@</span>
+            <span className="popup">MyEmail@email.com</span>
+            </a>
             <a
               className="link-wrapper"
               href="https://github.com/PatrikasDapsys/"

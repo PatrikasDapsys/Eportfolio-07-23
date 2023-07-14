@@ -30,14 +30,14 @@ function Contact() {
           alert.success("email sent succesfully!");
         },
         () => {
-          alert.error("Email wasn't sent!");
+          alert.error("Email wasn't sent! Try again or email me directly at Email@email.com");
         }
       );
   }
 
   return (
     <section
-      className="bg-dark-900 text-white flex flex-col items-center py-16 relative"
+      className="section py-16"
       id="contact"
     >
       {/* MASK */}
@@ -47,15 +47,13 @@ function Contact() {
       <div className={"mask bottom-0 w-full h-16"}></div>
       {/* TITLE */}
       <h1
-        className="h-[136px] text-center flex pb-16 pl-0 uppercase z-[3] tracking-normal text-5xl 
-       sm:pl-[20px] sm:tracking-[20px]
-        md:pl-[60px] md:tracking-[60px] xs:text-6xl xl:text-7xl"
+        className="title"
       >
         Contact
       </h1>
       <div className="border-2  flex flex-col items-center first-letter w-4/5 sm:w-3/5">
         {/* TEXT */}
-        <div className="text-center my-8 w-4/5 text-xl font-normal text-dark-300">
+        <div className="text-center my-8 w-4/5 text-xl font-normal text-light-500 dark:text-dark-300">
           I am actively seeking job opportunities and welcome any inquiries
           related to potential employment, reviews, invitations to collaborate
           on projects, or if you have any questions. Your feedback and
