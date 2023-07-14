@@ -14,21 +14,20 @@ const settings = {
   slidesToScroll: 1,
 };
 
-function ProjectsPage({ isDarkMode }) {
-  const mask = "absolute z-[2] bg-dark-900 ";
+function ProjectsPage() {
 
   return (
     <section
       id="projects"
       className="min-h-screen pt-16  bg-dark-900 text-white flex flex-col items-center relative"
     >
-      <div className={mask + "h-[200px] w-full top-0"}></div>
+      <div className={"mask h-[200px] w-full top-0"}></div>
       <div
-        className={mask + "w-[10%] left-0 top-0"}
+        className={"mask w-[10%] left-0 top-0"}
         style={{ height: "calc(100% - 24px)" }}
       ></div>
       <div
-        className={mask + "w-[10%] right-0 top-0"}
+        className={"mask w-[10%] right-0 top-0"}
         style={{ height: "calc(100% - 24px)" }}
       ></div>
       <h1
@@ -100,7 +99,7 @@ function ProjectsPage({ isDarkMode }) {
           </div>
         </div>
       </div>
-      <div className={mask + "relative w-full h-[40px]"}></div>
+      <div className={"mask relative w-full h-[40px]"}></div>
 
       {/* PROJECT 2 */}
       <div className="border-2 w-4/5 grid">
@@ -161,7 +160,7 @@ function ProjectsPage({ isDarkMode }) {
           </div>
         </div>
       </div>
-      <div className={mask + "relative w-full h-[40px]"}></div>
+      <div className={"mask relative w-full h-[40px]"}></div>
 
       {/* PROJECT 3 */}
       <div className="border-2 w-4/5 grid">
@@ -226,7 +225,7 @@ function ProjectsPage({ isDarkMode }) {
           </div>
         </div>
       </div>
-      <div className={mask + "relative w-full h-[40px]"}></div>
+      <div className={"mask relative w-full h-[40px]"}></div>
     </section>
   );
 }

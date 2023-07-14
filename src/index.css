@@ -84,6 +84,10 @@ textarea:focus-within {
   @apply font-[450] italic;
 }
 
+.mask {
+  @apply duration-700 absolute z-[2] bg-light-900 dark:bg-dark-900;
+}
+
 /* MEDIA POPUP */
 
 .link-wrapper {

@@ -1,6 +1,13 @@
-function ChangingShape({ shapeSize, isDarkMode }) {
+import { useEffect, useState } from "react";
+import { themeValue } from "./LandingPage";
+
+function ChangingShape({ shapeSize }) {
+
   return (
-    <div className="blob absolute opacity-[0.2] blur-[1px] animate-rotate" style={{minHeight:`${shapeSize}px`, minWidth:`${shapeSize}px`}}>
+    <div
+      className="blob absolute opacity-[0.2] blur-[1px] animate-rotate"
+      style={{ minHeight: `${shapeSize}px`, minWidth: `${shapeSize}px` }}
+    >
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <pattern
           id="grainyPattern"
@@ -8,7 +15,11 @@ function ChangingShape({ shapeSize, isDarkMode }) {
           height="2"
           patternUnits="userSpaceOnUse"
         >
-          <rect width="1" height="1" fill={isDarkMode ? "#cbcaca" : "#000000"} />
+          <rect
+            width="1"
+            height="1"
+            fill={themeValue === "dark" ? "#cbcaca" : "#000000"}
+          />
           <rect x="1" y="1" width="1" height="1" opacity="0.1" />
         </pattern>
         <path fill="url(#grainyPattern)" transform="translate(100 100)">

@@ -6,58 +6,74 @@ import HackerWord from "./HackerWord";
 import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
 import SquareSharpIcon from "@mui/icons-material/SquareSharp";
 
-function LandingPage({ isDarkMode, setIsDarkMode }) {
-  const mask = `absolute z-[2] ${isDarkMode ? "bg-dark-900" : "bg-light-900"} `;
-  const outsideText = `${
-    isDarkMode ? "text-dark-500" : "text-ligth-500"
-  } whitespace-nowrap absolute tracking-widest z-[3]`;
+let themeValue = "dark";
+function LandingPage() {
+  const [theme, setTheme] = useState("dark");
+  const element = document.documentElement;
+  const outsideText = `whitespace-nowrap absolute font-bold tracking-widest z-[3] text-light-500 dark:text-dark-500`;
+
+  useEffect(() => {
+    themeValue = theme;
+    switch (theme) {
+      case "dark":
+        element.classList.add("dark");
+        break;
+      case "light":
+        element.classList.remove("dark");
+      default:
+        break;
+    }
+  }, [theme]);
 
   return (
     <section
       id="landing"
-      className={` w-screen h-screen ${
-        isDarkMode ? "bg-dark-900" : "bg-light-900"
-      } flex justify-center p-[30px] relative transition-colors duration-300`}
+      className={` w-screen h-screen bg-light-900 dark:bg-dark-900
+      flex justify-center p-[30px] relative transition-colors duration-1000`}
     >
       {/* MASK  */}
-      <div className={mask + "h-[30px] w-screen top-0"}></div>
-      <div className={mask + "h-[46px] w-screen bottom-0"}></div>
+      <div className={"mask h-[30px] w-screen top-0"}></div>
+      <div className={"mask h-[46px] w-screen bottom-0"}></div>
       <div
-        className={mask + "w-[30px] left-0"}
+        className={"mask w-[30px] left-0"}
         style={{ height: "calc(100vh - 30px)" }}
       ></div>
       <div
-        className={mask + "w-[30px] right-0"}
+        className={"mask w-[30px] right-0"}
         style={{ height: "calc(100vh - 30px)" }}
       ></div>
 
       {/* OUSIDE TEXT */}
       <span
-        className={outsideText + " left-[-45px] top-[80px] rotate-[270deg] "}
+        className={outsideText + " left-[-52px] top-[90px] rotate-[270deg] "}
       >
         Patrikas Dapšys
       </span>
-      <span className={outsideText + " right-[-45px] bottom-[98px] rotate-90 "}>
+      <span
+        className={outsideText + " right-[-52px] bottom-[105px] rotate-90 "}
+      >
         Patrikas Dapšys
       </span>
 
       <div
-        className={`${
-          isDarkMode ? "text-white" : "text-black"
-        } absolute flex gap-3 rotate-[270deg] bottom-[120px] left-[-55px] z-[3] blur-[.6px]`}
+        className={`text-black dark:text-white absolute flex gap-3 rotate-[270deg] bottom-[120px] left-[-55px] z-[3] blur-[.6px]`}
       >
         <button
-          onClick={() => setIsDarkMode(false)}
+          onClick={() => setTheme("light")}
           className={` uppercase flex items-center`}
         >
-          {isDarkMode ? <CheckBoxOutlineBlankSharpIcon /> : <SquareSharpIcon />}
+          {theme === "dark" ? (
+            <CheckBoxOutlineBlankSharpIcon />
+          ) : (
+            <SquareSharpIcon />
+          )}
           Light
         </button>
         <button
-          onClick={() => setIsDarkMode(true)}
+          onClick={() => setTheme("dark")}
           className="uppercase flex items-center"
         >
-          {!isDarkMode ? (
+          {theme === "light" ? (
             <CheckBoxOutlineBlankSharpIcon />
           ) : (
             <SquareSharpIcon />
@@ -76,16 +92,12 @@ function LandingPage({ isDarkMode, setIsDarkMode }) {
         <div className={`flex justify-between text-3xl p-4 xs:p-8`}>
           <div className="">
             <div
-              className={`${
-                isDarkMode ? "text-white" : "text-black"
-              } mb-3 text-5xl md:text-6xl xl:text-7xl`}
+              className={`text-black dark:text-white mb-3 text-5xl md:text-6xl xl:text-7xl`}
             >
-              <HackerWord isDarkMode={isDarkMode}>Patrikas Dapšys</HackerWord>
+              <HackerWord>Patrikas Dapšys</HackerWord>
             </div>
             <div
-              className={`${
-                isDarkMode ? "text-dark-300" : "text-light-800"
-              } text-xs w-[80%] sm:w-[60%]  md:text-base xl:text-lg`}
+              className={`text-light-300 dark:text-dark-300 text-xs w-[80%] sm:w-[60%]  md:text-base xl:text-lg`}
             >
               I'm a{" "}
               <span className="keyword"> Frontend software engineer </span> with
@@ -95,9 +107,7 @@ function LandingPage({ isDarkMode, setIsDarkMode }) {
             </div>
           </div>
           <ul
-            className={`${
-              isDarkMode ? "text-gray-300" : "text-light-500"
-            } flex flex-col gap-2`}
+            className={`text-light-500 dark:text-gray-300 flex flex-col gap-2`}
           >
             <a
               className="link-wrapper"
@@ -121,15 +131,18 @@ function LandingPage({ isDarkMode, setIsDarkMode }) {
             </a>
           </ul>
         </div>
-        <div className={`${isDarkMode ? "text-dark-300" : "text-light-300"} text-dark-300  w-full flex justify-between p-4 xs:p-8`}>
+        <div
+          className={`dark:text-dark-300
+         text-light-300 w-full flex justify-between p-4 xs:p-8`}
+        >
           <ul className="flex flex-col-reverse list-disc">
             <li>
-              <a className="link__hover-effect" href="#contact">
+              <a className="font-[530] link__hover-effect" href="#contact">
                 Contact
               </a>
             </li>
             <li>
-              <a className="link__hover-effect" href="#projects">
+              <a className="font-[530] link__hover-effect" href="#projects">
                 Projects
               </a>
             </li>
@@ -144,3 +157,4 @@ function LandingPage({ isDarkMode, setIsDarkMode }) {
 }
 
 export default LandingPage;
+export { themeValue };
