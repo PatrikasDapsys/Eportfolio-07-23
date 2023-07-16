@@ -6,6 +6,7 @@ import HackerWord from "./HackerWord";
 import CheckBoxOutlineBlankSharpIcon from "@mui/icons-material/CheckBoxOutlineBlankSharp";
 import SquareSharpIcon from "@mui/icons-material/SquareSharp";
 import { delay, motion } from "framer-motion";
+import Resume from '../assets/Patrikas_Dapšys_Resume.pdf'
 
 let themeValue = "dark";
 function LandingPage() {
@@ -114,9 +115,9 @@ function LandingPage() {
             animate={{ x: [100, 0] }}
             className={`text-light-500 dark:text-gray-300 flex flex-col gap-2`}
           >
-            <a href="mailto:patrikas.dapsys@gmail.com" className="link-wrapper">
+            <a href="mailto:me@patrikasdapsys.com" className="link-wrapper">
               <span className="font-bold">@</span>
-              <span className="popup">MyEmail@email.com</span>
+              <span className="popup">me@patrikasdapsys.com</span>
             </a>
             <a
               className="link-wrapper"
@@ -134,7 +135,7 @@ function LandingPage() {
               <span className="popup">LinkedIn Profile</span>
               <LinkedInIcon />
             </a>
-            <a className="link-wrapper" href="" target="_blank">
+            <a href={Resume} className="link-wrapper" target="_blank">
               <span className="popup">Resume</span>
               <DescriptionIcon />
             </a>

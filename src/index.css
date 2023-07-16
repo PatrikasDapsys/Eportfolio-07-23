@@ -118,8 +118,8 @@ textarea:focus-within {
   white-space: nowrap;
   text-align: right;
   transition: all 300ms ease;
-  width: 120px;
-  left: -100px;
+  width: 180px;
+  left: -160px;
   opacity: 0;
   font-weight: 530;
 }
