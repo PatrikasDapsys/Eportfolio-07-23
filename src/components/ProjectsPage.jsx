@@ -34,10 +34,10 @@ function ProjectsPage() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.3 }}
         variants={{
-          hidden: { y: 500 },
+          hidden: { y: 200 },
           visible: { y: 0 },
         }}
         className="border-2 w-4/5 grid"
@@ -112,10 +112,10 @@ function ProjectsPage() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.3 }}
         variants={{
-          hidden: { y: 500 },
+          hidden: { y: 200 },
           visible: { y: 0 },
         }}
         className="border-2 w-4/5 grid"
@@ -192,10 +192,10 @@ function ProjectsPage() {
         className="border-2 w-4/5 grid"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.3 }}
         variants={{
-          hidden: { y: 500 },
+          hidden: { y: 200 },
           visible: { y: 0 },
         }}
       >

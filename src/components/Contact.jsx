@@ -4,7 +4,7 @@ import Textarea from "./Textarea";
 import emailjs from "@emailjs/browser";
 import AnimatedButton from "../components/AnimatedButton/AnimatedButton";
 import { useAlert } from "react-alert";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -101,10 +101,10 @@ function Contact() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1.5, delay: 1, }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay:0.3 }}
             variants={{
-              hidden: { opacity: 0, y: 100, scale: 2 },
+              hidden: { opacity: 0, y: 50, scale: 2 },
               visible: { opacity: 1, y: 0, scale: 1 },
             }}
             className="w-full flex justify-center"
