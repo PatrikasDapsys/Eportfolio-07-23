@@ -16,15 +16,15 @@ function HomePage({}) {
 
   return (
     <>
-      {/* {!showMainPage && <LoadingPage />}
-      {showMainPage && ( */}
+      {!showMainPage && <LoadingPage />}
+      {showMainPage && (
         <>
           <LandingPage />
           <ProjectsPage />
           <Contact />
           <Footer />
         </>
-      {/* )} */}
+      )}
     </>
   );
 }
